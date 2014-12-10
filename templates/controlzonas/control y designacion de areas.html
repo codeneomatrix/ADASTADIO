@@ -1,0 +1,144 @@
+<html><head>
+<title>Estadio Tecnologico</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="description" content="Estadio tecnologico" />
+<meta name="copyright" content="Ada software" />
+<link rel="stylesheet" type="text/css" href="{{MEDIA_URL}}css/kickstart.css" media="all" />                  
+<link rel="stylesheet" type="text/css" href="{{MEDIA_URL}}style.css" media="all" />                          
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="{{MEDIA_URL}}js/kickstart.js"></script>                                  
+<style type="text/css">
+body,td,th {
+	font-family: Arimo, arial, verdana, sans-serif;
+}
+body {
+	margin-left: 0px;
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+.vs {
+	font-size: 1cm;
+}
+tituloevento {
+	font-size: 1em;
+}
+.callout.callout-top.clearfix .grid .col_6 .grid .grid .odd.last .kickoff .home-logo div {
+	font-size: 1.3em;
+}
+.none table tr td table tr td div {
+	font-size: 2em;
+}
+</style>
+<script type="text/javascript">
+function MM_openBrWindow(theURL,winName,features) { //v2.0
+  window.open(theURL,winName,features);
+}
+</script>
+</head><body>
+
+
+
+<nav class="navbar">
+  <div align="left">
+    <table width="200" border="1">
+      <tr>
+        <td height="96"><img src="{{MEDIA_URL}}logo-150x1501.png" width="76" height="77" align="left"><p align="center">ESTADIO TECNOLOGICO</p>
+        <p align="center">DESIGNACION Y CONTROL DE ZONAS<li>
+         <a href="/PANEL/"><span>C</span>ONTROL DE ADMINISTRADOR</a></li></td>
+         <div align="right">
+            <p>BIENVENIDO {{user.username}}  </span> 
+            <a align="right" href="/cerrar/"> Salir</a></a> </p> 
+          </div>
+      </tr>
+    </table>
+</div>
+</nav>
+<div></div>
+ <p>&nbsp;</p>
+       <p>&nbsp;</p>
+           
+<div class="none">
+  <table width="200" border="0">
+  <tr>
+    <th scope="row">
+
+      <p>&nbsp;</p></th>
+    <td><p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      
+      <div id="table-example" class="none"><div class="clear">
+      
+      </div>
+        <div class="col_10">
+      
+  <table class="sortable" cellspacing="0" cellpadding="0">
+  <thead><tr>
+    <th>Zona</th>
+    <th>Area</th>
+    <th>Precio del boleto</th>
+    <th>Boletos disponibles para la venta del area</th>
+    <th>Cantidad total de boletos de la zona</th>
+    <th></th>
+        
+  </tr></thead>
+
+  <tbody>
+
+     {% for area in areas %}
+    <tr>
+      <td>{{area.idzona}}</td>
+        
+        <td>{{area.nombre}}</td>
+        <td>{{area.precio}}</td>
+        <td>{{area.asientosdisponibles}}</td>
+        <td>{{area.idzona.cantidaboletos}}</td>
+    <td><a href="/admin/controlzonas/areas/"><i class="icon-pencil"></i></a> 
+    <a href="/admin/controlzonas/areas/"><i class="icon-minus-sign"></i></a></td>
+
+    <tr>
+       
+  </tr>
+    {% endfor %}
+    </tr>
+    </tbody>
+    
+    <tr>
+        <td><a href="/control/registrarzonas/"><i class="icon-plus-sign"></i></a> </td>
+        <td><a href="/control/registrarareas/"><i class="icon-plus-sign"></i></a> </td>
+        <td></td>
+        <td></td>
+        <td></td>
+  </tr>
+
+  </table>
+  </div>
+  </div>
+      <p>
+      <p>&nbsp;</p></td>
+  </tr>
+</table>
+      </section>
+</p></td>
+    </tr>
+<tr>
+      
+<div id="footer">
+&copy; Copyright 2014 All Rights Reserved.Ada Software </div>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-1641401-6']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+</body></html>
